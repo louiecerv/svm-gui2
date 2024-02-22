@@ -57,13 +57,7 @@ def app():
         value=1000,  # Initial value
     )
 
-    cluster_std = st.slider(
-        label="Standard deviation (between 0 and 1):",
-        min_value=0.1,
-        max_value=2,
-        step=0.1,
-        value=.5,  # Initial value
-    )
+    cluster_std = st.number_input("Standard deviation (between 0 and 1):")
 
     random_state = st.slider(
         label="Random seed (between 0 and 100):",
