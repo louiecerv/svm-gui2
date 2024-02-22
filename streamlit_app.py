@@ -119,10 +119,7 @@ def app():
                 ax=ax  # Specify the axes object
             )          
 
-            #plot support vectors
-            ax.scatter(clfSVM.support_vectors_[:,0], 
-                clfSVM.support_vectors_[:,1], s=100, 
-                linewidth=2, facecolor='none', edgecolor='black')
+
             
             # Plot the decision function directly on ax
             xlim = ax.get_xlim()
@@ -136,8 +133,10 @@ def app():
     
             ax.contour(XX, YY, Z, colors='k', levels=[-1, 0, 1], alpha=0.5, linestyles=['--', '--', '--'])
     
-            # Plot support vectors
-            ax.scatter(clfSVM.support_vectors_[:, 0], clfSVM.support_vectors_[:, 1], s=100, linewidth=1, facecolor='none')
+            #plot support vectors
+            ax.scatter(clfSVM.support_vectors_[:,0], 
+                clfSVM.support_vectors_[:,1], s=100, 
+                linewidth=2, facecolor='none', edgecolor='black')
     
             st.pyplot(fig)
         else :
