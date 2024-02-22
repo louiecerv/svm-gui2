@@ -46,7 +46,7 @@ Evaluates the model's performance using accuracy, precision, recall, and F1-scor
     st.write('Visualization:')
     st.write("""Interactive scatter plot displaying data points colored by 
     their true and predicted classes. Decision boundary overlayed on the plot. 
-    Performance metrics displayed dynamically as cluster overlap changes."""
+    Performance metrics displayed dynamically as cluster overlap changes.""")
 
     # Create a slider with a label and initial value
     n_samples = st.slider(
