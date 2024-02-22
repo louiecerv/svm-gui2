@@ -136,7 +136,7 @@ def app():
     
             st.pyplot(fig)
         else :
-            st.write('n_classes > 2 cannot be plotted on 2D graph.')
+            st.write('Support vectors of n_classes > 2 cannot be plotted on a 2D graph.')
 
 def generate_random_points_in_square(x_min, x_max, y_min, y_max, num_points):
     """
