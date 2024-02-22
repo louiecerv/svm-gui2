@@ -23,10 +23,30 @@ def app():
     st.text(text)
 
     st.subheader('Description')
-
-    text = """
-        Replace this with description of SVM. """
+    st.write('Support Vector Machines (SVM):')
+    text = """Supervised learning algorithm: Used for both classification and regression.
+Linear decision boundary: In high-dimensional spaces, it uses the 
+kernel trick to create a non-linear decision boundary by implicitly 
+mapping data points to higher dimensions.
+Maximizing margin: Aims to find the hyperplane that separates classes 
+with the largest margin (distance between the hyperplane and the closest data 
+points on either side). This makes it robust to noise and outliers.
+"""
     st.write(text)
+    st.write('Key Features:')
+    st.write("""Dataset Generation:
+Randomly generates data points belonging to two clusters using user-defined settings:
+Number of clusters
+Number of data points per cluster
+Cluster means and standard deviations
+Overlap control (overlap_factor) to adjust cluster spread""")
+    st.write('SVM Classification:')
+st.write("""Trains an SVM model with the chosen kernel (linear or radial basis function) and hyperparameters.
+Evaluates the model's performance using accuracy, precision, recall, and F1-score.""")
+    st.write('Visualization:')
+    st.write("""Interactive scatter plot displaying data points colored by 
+    their true and predicted classes. Decision boundary overlayed on the plot. 
+    Performance metrics displayed dynamically as cluster overlap changes."""
 
     # Create a slider with a label and initial value
     n_samples = st.slider(
