@@ -91,9 +91,9 @@ def app():
         st.subheader('Confusion Matrix')
         cm = confusion_matrix(y_test, y_test_pred)
         st.write(cm)
+        st.subheader('Visualization')
+
         if n_clusters == 2:
-            st.subheader('Visualization')
-    
             #use the Numpy array to merge the data and test columns
             dataset = np.column_stack((X, y))
 
@@ -135,6 +135,8 @@ def app():
             ax.scatter(clfSVM.support_vectors_[:, 0], clfSVM.support_vectors_[:, 1], s=100, linewidth=1, facecolor='none')
     
             st.pyplot(fig)
+        elif:
+            st.write('n_classes > 2 cannot be plotted on 2D graph.')
 
 def generate_random_points_in_square(x_min, x_max, y_min, y_max, num_points):
     """
